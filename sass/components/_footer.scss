@@ -1,0 +1,52 @@
+.footer {
+  background-color: var(--color-background-dark);
+  padding: 60px 0;
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    align-items: baseline;
+    @include for-size(tablet) {
+      column-gap: 165px;
+    }
+    @include for-size(desktop) {
+      column-gap: 70px;
+      justify-content: space-between;
+    }
+  }
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include for-size(desktop) {
+    align-items: start;
+  }
+  &__item:not(:last-child) {
+    display: block;
+    margin-bottom: 9px;
+  }
+  &__link {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.71;
+    font-style: normal;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color var(--transition-cubic);
+    @include for-size(desktop) {
+      text-align: left;
+    }
+    &--light {
+      color: var(--color-primary-white);
+    }
+    &:hover,
+    &:focus {
+      color: var(--color-accent);
+    }
+  }
+}

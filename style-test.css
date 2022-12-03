@@ -1,0 +1,40 @@
+* {
+}
+
+body {
+}
+
+.container {
+  height: 100vh;
+  outline: 1px solid black;
+}
+
+.wrapper {
+  height: 500px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  outline: 1px dotted rgb(44, 39, 39);
+  background-color: rgba(171, 133, 207, 0.274);
+}
+
+.hero-form__label.another {
+  background-color: rgb(205, 33, 33);
+  flex-shrink: 4;
+}
+
+.hero-form__label {
+  margin: 18px 0;
+  flex-basis: 70px;
+  flex-shrink: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: blanchedalmond;
+}
+
+/* .hero-form__label {
+  height: auto;
+} */

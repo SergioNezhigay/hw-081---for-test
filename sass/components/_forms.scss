@@ -1,0 +1,197 @@
+.hero-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  width: 100%;
+  height: 100%;
+  max-height: 529px;
+  @include for-size(desktop) {
+    max-height: 501px;
+  }
+  &__title {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: 0.03em;
+    color: var(--color-text-title);
+    margin-bottom: 2px; /* to correct margin from gap */
+    @include for-size(micro-mobile-only) {
+      font-size: 16px;
+      line-height: 1.3;
+      max-width: 200px;
+    }
+    @include for-size(desktop) {
+      line-height: 1.15;
+    }
+  }
+  &__label {
+    position: relative;
+    font-size: 12px;
+    line-height: 1.17;
+    flex-basis: 40px;
+    &--large {
+      flex-basis: 120px;
+    }
+  }
+  &__input {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    height: 100%;
+    padding: 12px 16px 12px 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    width: 100%;
+    color: var(--color-text-primary);
+    outline: none;
+    transition: border-color var(--transition-cubic);
+    &--large {
+      padding-left: 16px;
+      padding-top: 12px;
+      resize: none;
+    }
+    &::placeholder {
+      color: rgba(117, 117, 117, 0.5);
+    }
+    &:focus {
+      border-color: var(--color-accent);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    color: var(--color-text-title);
+    transition: color var(--transition-cubic);
+    .hero-form__label:focus-within & {
+      color: var(--color-accent);
+    }
+  }
+  &__field-name {
+    position: absolute;
+    display: block;
+    top: -18px;
+    left: 0;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--color-text-primary);
+  }
+  &__checkbox-field {
+    position: relative;
+    margin: -8px 0 2px; /* to correct margin from gap */
+  }
+  &__checkbox-label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    padding-left: 24px;
+    color: var(--color-text-primary);
+    fill: var(--color-primary-white);
+    cursor: pointer;
+    @include for-size(desktop) {
+      font-size: 14px;
+      line-height: 1.71;
+      padding-left: 38px;
+    }
+  }
+  &__link {
+    color: var(--color-accent);
+  }
+  &__square {
+    width: 16px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    background-color: var(--color-primary-white);
+    border: 2px solid var(--color-text-title);
+    border-radius: 2px;
+    z-index: -10;
+    transition: border-color var(--transition-cubic), background-color var(--transition-cubic);
+    cursor: pointer;
+    .hero-form__checkbox:focus + & {
+      border-color: var(--color-accent);
+    }
+    .hero-form__checkbox:checked + & {
+      background-color: var(--color-accent);
+    }
+    @include for-size(desktop) {
+      left: 15px;
+    }
+  }
+  &__check-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    fill: var(--color-primary-white);
+  }
+}
+
+.signup-form {
+  @include for-size(notDesktop) {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+  }
+  @include for-size(desktop) {
+    display: flex;
+    align-items: end;
+  }
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-primary-white);
+    margin-bottom: 20px;
+    @include for-size(desktop) {
+      text-align: left;
+    }
+  }
+  &__input {
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    margin: 0 auto 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    outline: none;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: transparent;
+    transition: border-color var(--transition-cubic);
+    @include for-size(desktop) {
+      width: 358px;
+      margin: 0 12px 0 0;
+    }
+    &::placeholder {
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    &:focus {
+      border: 1px solid var(--color-accent);
+    }
+  }
+  &__icon {
+    margin-left: 10px;
+    @include for-size(desktop) {
+      margin-left: 12px;
+    }
+  }
+}

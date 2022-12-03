@@ -1,0 +1,138 @@
+.js-open-menu {
+  border: none;
+  background-color: transparent;
+  margin: 10px 0 10px auto;
+  cursor: pointer;
+  @include for-size(tablet) {
+    display: none;
+  }
+}
+
+.js-close-menu {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background-color: transparent;
+  transition: color var(--transition-cubic);
+  &:hover,
+  &:focus {
+    color: var(--color-accent);
+    cursor: pointer;
+  }
+}
+
+.js-menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(-150%);
+  // overflow: hidden;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  padding: 48px 40px;
+  background-color: var(--color-primary-white);
+  transition: transform var(--transition-cubic);
+  z-index: 1;
+  @include for-size(micro-mobile-only) {
+    padding: 48px 15px;
+  }
+  &.is-open {
+    transform: translateX(0%);
+  }
+}
+
+.site-nav-mobile {
+  margin-bottom: auto;
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  &__link {
+    font-size: 40px;
+    line-height: 1.18;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--color-text-title);
+    text-decoration: none;
+
+    transition: color var(--transition-cubic);
+    @include for-size(micro-mobile-only) {
+      // font-size: 30px;
+    }
+
+    &--active,
+    &:hover,
+    &:focus {
+      color: var(--color-accent);
+    }
+    &[href*='mail'] {
+      color: var(--color-accent);
+    }
+  }
+}
+
+.social-list-mobile {
+  display: flex;
+  margin-top: 64px;
+  @include for-size(micro-mobile-only) {
+    // flex-direction: column;
+  }
+  &__item {
+    @include for-size(micro-mobile-only) {
+      // padding-top: 10px;
+    }
+  }
+  &__item:not(:last-child) {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    @include for-size(micro-mobile-only) {
+      border: none;
+    }
+  }
+  &__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: var(--color-accent);
+    text-decoration: none;
+    @include for-size(micro-mobile-only) {
+      font-size: 14px;
+      // line-height: 1.6;
+    }
+  }
+}
+
+.contacts-nav-mobile {
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  &__link {
+    font-size: 34px;
+    line-height: 1.17;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    color: var(--color-text-primary);
+    transition: color var(--transition-cubic);
+    &[href*='tel'] {
+      font-size: 24px;
+      @include for-size(micro-mobile-only) {
+        font-size: 18px;
+      }
+    }
+    @include for-size(micro-mobile-only) {
+      font-size: 26px;
+    }
+    &:hover,
+    &:focus {
+      color: var(--color-accent);
+    }
+  }
+}
