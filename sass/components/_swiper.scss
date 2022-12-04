@@ -8,12 +8,6 @@ body {
   outline: 1px dotted blue;
   @include for-size(tablet) {
     display: flex;
-    justify-content: end;
-  }
-}
-
-.my-container.left {
-  @include for-size(tablet) {
     flex-direction: row-reverse;
     justify-content: start;
   }
@@ -114,6 +108,10 @@ body {
   background-image: url('./../images/swiper/arrow-left.svg');
   @include for-size(tablet) {
     right: calc(108px + 32px + 32px);
+    left: unset;
+  }
+  @include for-size(desktop) {
+    right: calc(108px + 32px);
     left: unset;
   }
 }

@@ -1734,14 +1734,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .my-container.left {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -1867,6 +1859,12 @@ body {
 @media screen and (min-width: 1024px) {
   .swiper-button-prev {
     right: 172px;
+    left: unset;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .swiper-button-prev {
+    right: 140px;
     left: unset;
   }
 }
