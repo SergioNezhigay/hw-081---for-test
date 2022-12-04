@@ -64,9 +64,11 @@ body {
     width: $mobile;
   }
   @include for-size(tablet) {
+    padding: 0 47px;
     width: $tablet;
   }
   @include for-size(desktop) {
+    padding: 0 85px;
     width: $desktop;
   }
 }

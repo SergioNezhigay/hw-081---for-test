@@ -8,6 +8,7 @@ body {
   outline: 1px dotted blue;
   @include for-size(tablet) {
     display: flex;
+    justify-content: end;
   }
 }
 
@@ -16,7 +17,7 @@ body {
   height: 300px;
   // background-color: aqua;
   @include for-size(tablet) {
-    width: 50%;
+    width: 20%;
   }
 }
 
@@ -28,26 +29,37 @@ body {
 
 .wrapper-mask {
   position: relative;
-  // margin-top: 50px;
-  margin-left: -15px;
-  margin-right: -15px;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  padding-left: 60px;
-  padding-right: 60px;
   overflow: hidden;
-  // outline: 1px dotted green;
+  @include for-size(mobile-only) {
+    margin-left: -15px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
   @include for-size(tablet) {
-    width: 50%;
+    width: 600px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     margin-left: 0;
-    margin-right: 0;
+    margin-right: -69px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  @include for-size(desktop) {
+    width: 670px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    // margin-left: 0;
+    margin-right: -3px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
 .swiper {
-  width: calc(194px * 2 + 16px);
-  height: auto;
   overflow: visible;
+  width: calc(194px * 2 + 16px);
   transform: translateX(-72px);
   @include for-size(tablet) {
     transform: translateX(93px);
@@ -94,7 +106,7 @@ body {
   left: 15px;
   background-image: url('./../images/swiper/arrow-left.svg');
   @include for-size(tablet) {
-    right: calc(15px + 32px + 64px);
+    right: calc(108px + 32px + 32px);
     left: unset;
   }
 }
@@ -103,7 +115,7 @@ body {
   left: calc(15px + 32px + 32px);
   background-image: url('./../images/swiper/arrow-right.svg');
   @include for-size(tablet) {
-    right: calc(15px + 32px);
+    right: calc(108px);
     left: unset;
   }
 }

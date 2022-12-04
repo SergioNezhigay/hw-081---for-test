@@ -393,11 +393,13 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .container {
+    padding: 0 47px;
     width: 1024px;
   }
 }
 @media screen and (min-width: 1280px) {
   .container {
+    padding: 0 85px;
     width: 1280px;
   }
 }
@@ -1732,6 +1734,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
   }
 }
 
@@ -1741,7 +1746,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .box {
-    width: 50%;
+    width: 20%;
   }
 }
 
@@ -1753,26 +1758,42 @@ body {
 
 .wrapper-mask {
   position: relative;
-  margin-left: -15px;
-  margin-right: -15px;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  padding-left: 60px;
-  padding-right: 60px;
   overflow: hidden;
+}
+@media screen and (max-width: 1023.98px) {
+  .wrapper-mask {
+    margin-left: -15px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .wrapper-mask {
-    width: 50%;
+    width: 600px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     margin-left: 0;
-    margin-right: 0;
+    margin-right: -69px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .wrapper-mask {
+    width: 670px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-right: -3px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
 .swiper {
-  width: 404px;
-  height: auto;
   overflow: visible;
+  width: 404px;
   -webkit-transform: translateX(-72px);
           transform: translateX(-72px);
 }
@@ -1831,7 +1852,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .swiper-button-prev {
-    right: 111px;
+    right: 172px;
     left: unset;
   }
 }
@@ -1842,7 +1863,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .swiper-button-next {
-    right: 47px;
+    right: 108px;
     left: unset;
   }
 }
