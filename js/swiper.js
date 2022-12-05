@@ -1,9 +1,8 @@
 var swiper = new Swiper('.mySwiper', {
   slidesPerView: 2,
-  initialSlide: 4,
-  spaceBetween: 16,
-  centeredSlides: true,
-  freeMode: true,
+  initialSlide: 2,
+  // centeredSlides: true,
+  // freeMode: true,
   // loop: true,
   navigation: {
     nextEl: '.swiper-button-next',
@@ -13,12 +12,12 @@ var swiper = new Swiper('.mySwiper', {
     // when window width is >= 320px
     320: {
       slidesPerView: 2,
-      spaceBetween: 16,
+      spaceBetween: 20,
     },
     // when window width is >= 480px
     1024: {
-      slidesPerView: 2,
-      spaceBetween: 40,
+      slidesPerView: 3,
+      spaceBetween: 34,
     },
   },
 });
